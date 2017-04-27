@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1089920454613",
+    "firebase_url": "https://competitortool.firebaseio.com",
+    "project_id": "competitortool",
+    "storage_bucket": "competitortool.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089920454613:android:8b7fc451c5e2e3ed",
+        "android_client_info": {
+          "package_name": "danfoss.com.ru.VLT.analogs.finder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089920454613-metlvgg63gnpadeqk2vk7agahnms2c5t.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1089920454613-j5pup07bji8ec8d2nhg9frcjoeb5uouo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuw-eqch2eaYBdIHmYRL-0RwyRGjQi4Jk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

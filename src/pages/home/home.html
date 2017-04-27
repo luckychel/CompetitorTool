@@ -1,0 +1,75 @@
+<ion-header no-border>
+  <ion-navbar class="headerToolbar">
+    <img src="assets/icon/Logo.jpg" width="auto" style="display:inline-block" height="40px"/>
+    <ion-title></ion-title>
+      <ion-buttons end>  
+      <button ion-button icon-only (click)="onAbout()">
+        <ion-icon color="white" ios="ios-information-circle" md="md-information-circle" style="font-size:30px;"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="backGroundGray">
+  
+ <ion-searchbar
+  [(ngModel)]="pSearch"
+  style="position: relative;"
+  [showCancelButton]="1"
+  (input)="getItems($event)"
+  (ionClear)="onClear($event)"
+  [debounce]="250" 
+  placeholder="Введите код">
+</ion-searchbar>
+
+  <ion-list *ngIf="showList" style="position:absolute; z-index: 1; left:15px; right: 15px; border: 1px solid #dedede; margin-top: 2px;">
+      <ion-item class="sItemList" *ngFor="let item of items" (click)="clickItem(item);" stop-event="click" style="border-bottom: 1px solid #D0050B;"> 
+        <span>{{ item }}</span>
+      </ion-item>
+  </ion-list>
+ <div *ngIf="result1" style="font-size: 12px; color:grey;padding-top: 5px;"><b>Бренд:</b> {{result1.$brend}}</div>
+ 
+  <ion-list >
+   <!-- <ion-item class="backGroundGray" *ngFor="let item of results" style="border-bottom: 2px solid #D0050B; font-size: 12px;" > 
+      <span [innerHTML]="item"></span>
+    </ion-item>-->
+    <ion-item class="backGroundGray" *ngIf="result1" style="padding-left: 0px;"> 
+      <div style="font-size: 16px; margin-bottom: 10px;"><b>Аналог марки VLT</b></div>
+      <div class="border2px"><b>Серия:</b> {{result1.$series}}</div>
+      <div class="border2px"><b>Заказной код:</b> {{result1.$custom}}</div>
+      <div class="border2px"><b>Типовой код:</b> {{result1.$model}}</div>
+    </ion-item>
+
+  <ion-item class="backGroundGray" *ngIf="result2" style="padding-left: 0px;"> 
+      <div style="font-size: 16px; margin-bottom: 10px;"><b>Аналог марки Vacon</b></div>
+      <div *ngFor="let item2 of result2" style="margin-bottom: 20px;">
+        <div class="border2px"><b>Серия:</b> {{item2.$series}}</div>
+        <div class="border2px"><b>Заказной код:</b> {{item2.$order}}</div>
+        <div class="border2px"><b>Типовой код:</b> {{item2.$type}}</div>
+      </div>
+    </ion-item>
+  </ion-list>
+
+
+
+ <!--<button ion-button (click)="btnAdd($event)">add time</button>
+ <button ion-button (click)="btnClear($event)">clear</button>
+-->
+  
+ <ion-list>
+    <ion-item *ngFor="let item of consoleList" > 
+      <span>{{ item }}</span>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer *ngIf="result1" no-border>
+  <ion-navbar class="footerToolbar">
+    <button ion-button block item-right icon-left (click)="onPrepareSend()">
+        <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+          Заполнить заявку
+      </button>
+    </ion-navbar>
+
+</ion-footer>

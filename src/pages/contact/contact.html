@@ -1,0 +1,46 @@
+<ion-header no-border>
+  <ion-navbar class="headerToolbar">
+    <ion-title>{{code}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="backGroundGray">
+ <ion-list>
+
+  <ion-item>
+    <ion-label color="primary" floating>ФИО</ion-label>
+    <ion-input [(ngModel)]="pFIO"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" floating>Организация</ion-label>
+    <ion-input [(ngModel)]="pORG"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="pEmail"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" floating>Телефон</ion-label>
+    <ion-input type="tel" [(ngModel)]="pPhone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" floating>Комментарий</ion-label>
+    <ion-input [(ngModel)]="pComment"></ion-input>
+  </ion-item>
+
+</ion-list>
+</ion-content>
+
+<ion-footer no-border  >
+  <ion-navbar class="footerToolbar">
+    <button ion-button block item-right icon-left (click)="onSend()">
+        <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+          Отправить
+      </button>
+    </ion-navbar>
+
+</ion-footer>

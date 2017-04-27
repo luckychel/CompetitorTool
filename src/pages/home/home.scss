@@ -1,0 +1,29 @@
+page-home {
+    .no-scroll .scroll-content{
+        overflow: hidden;
+    }
+    .backGroundGray{
+        background-color:  #f0f0f0  !important
+    }
+    .border2px{
+        border-bottom: 2px solid #D0050B; 
+        font-size: 13px; 
+        margin-bottom: 5px;
+    }
+    .headerToolbar .toolbar-background {
+        background-color:  #D0050B  !important;
+    }
+    .footerToolbar .toolbar-background {
+        //background-color:  #f0f0f0  !important;
+         background: transparent;
+    }
+    .sItemList .label {
+        margin:0px;
+    } 
+   .sItemList.item-block {
+        min-height: 2em;       
+   }
+
+    
+}
+

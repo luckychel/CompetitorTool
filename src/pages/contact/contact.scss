@@ -1,0 +1,17 @@
+page-contact {
+    .no-scroll .scroll-content{
+        overflow: hidden;
+    }
+    .backGroundGray{
+        background-color:  #f0f0f0  !important;
+    }
+    .headerToolbar .toolbar-background {
+        background-color:  #D0050B  !important;
+    }
+    .headerToolbar .toolbar-title, .headerToolbar .bar-button-default {
+        color: #f0f0f0;
+    }
+    .footerToolbar .toolbar-background {
+         background: transparent;
+    }
+}
